@@ -1,0 +1,14 @@
+<p>login works!</p>
+
+<div class="auth-container">
+  <h2>Acesso JamesBarber</h2>
+
+  <input type="email" [(ngModel)]="usuario.cliente_email" placeholder="E-mail">
+  <input type="password" [(ngModel)]="usuario.cliente_senha" placeholder="Senha">
+
+  <div class="actions">
+    <button (click)="fazerLogin()">Entrar</button>
+
+    <button (click)="irParaCadastro()" class="btn-secondary">Criar Conta</button>
+  </div>
+</div>
