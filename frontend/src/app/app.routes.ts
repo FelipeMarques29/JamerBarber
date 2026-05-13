@@ -1,12 +1,20 @@
 import { Routes } from '@angular/router';
-import { Login } from './features/acesso/login/login'; // Ajuste o caminho para o seu arquivo de login
+import { Login } from './features/acesso/login/login';
 import { Cadastro } from './features/acesso/cadastro/cadastro';
-import { Home } from './features/home/home'; // Importe a tela de home
+import { Home } from './features/home/home';
+import { Agendamentos } from './features/agendamentos/agendamentos';
+import { Clientes } from './features/clientes/clientes';
+import { Funcionarios } from './features/funcionarios/funcionarios';
+import { Servicos } from './features/servicos/servicos';
 
 export const routes: Routes = [
-  { path: '', component: Login },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component: Login },
-  { path: 'cadastro', component: Cadastro }, // O 'path' deve ser exatamente 'cadastro'
-  { path: 'home', component: Home }, // Adicione esta rota para a tela de home
-  { path: '**', redirectTo: '' }
+  { path: 'cadastro', component: Cadastro },
+  { path: 'home', component: Home },
+  { path: 'agendamentos', component: Agendamentos },
+  { path: 'clientes', component: Clientes },
+  { path: 'funcionarios', component: Funcionarios },
+  { path: 'servicos', component: Servicos },
+  { path: '**', redirectTo: 'home' }
 ];

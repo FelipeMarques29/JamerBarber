@@ -23,8 +23,10 @@ nav.navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 19px;
-  color: #111;
+}
+
+.brand-icon-img {
+  display: block;
 }
 
 .brand-name {
@@ -58,15 +60,23 @@ nav.navbar {
 .navbar-links a {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
   padding: 7px 14px;
   border-radius: 7px;
   font-size: 13px;
+  font-weight: 500;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
   transition: background 0.15s, color 0.15s;
   cursor: pointer;
   letter-spacing: 0.02em;
+}
+
+/* Esconde o slot do ícone enquanto a fonte Tabler não está carregada,
+   senão o gap empurra o texto pro lado dentro do botão ativo */
+.navbar-links a i:empty {
+  display: none;
 }
 
 .navbar-links a:hover {
@@ -77,7 +87,6 @@ nav.navbar {
 .navbar-links a.active {
   background: rgba(201, 168, 76, 0.12);
   color: #C9A84C;
-  font-weight: 500;
 }
 
 .navbar-user {
